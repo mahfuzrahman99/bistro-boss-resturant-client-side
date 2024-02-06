@@ -33,7 +33,7 @@ const UserHome = () => {
     queryKey: ["payment"],
     queryFn: async () => {
       const res = await axios.get(
-        "https://bistro-boss-resturant-server-side-wcku.vercel.app/payments"
+        "https://bistro-boss-resturant-server-side.vercel.app/payments"
       );
       return res.data;
     },

@@ -116,7 +116,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://bistro-boss-resturant-server-side-wcku.vercel.app/orderMenus/${params.id}`
+            `https://bistro-boss-resturant-server-side.vercel.app/orderMenus/${params.id}`
           ),
       },
       {
