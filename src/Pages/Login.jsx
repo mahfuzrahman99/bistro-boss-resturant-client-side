@@ -43,7 +43,11 @@ const Login = () => {
         .then(() => {
           const user = { email };
           axios
-            .post("http://localhost:2000/jwt", user, { withCredentials: true })
+            .post(
+              "https://bistro-boss-resturant-server-side.vercel.app/jwt",
+              user,
+              { withCredentials: true }
+            )
             .then((res) => {
               if (res.data.success) {
                 swal("Success!", "Login Successfully!", "success");

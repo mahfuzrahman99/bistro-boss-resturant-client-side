@@ -32,7 +32,9 @@ const UserHome = () => {
   const { data: payment = [] } = useQuery({
     queryKey: ["payment"],
     queryFn: async () => {
-      const res = await axios.get("http://localhost:2000/payments");
+      const res = await axios.get(
+        "https://bistro-boss-resturant-server-side.vercel.app/payments"
+      );
       return res.data;
     },
   });
@@ -90,21 +92,29 @@ const UserHome = () => {
         <div className=" bg-[#FEF9C3] px-16 py-12 space-y-1">
           <p className="text-3xl font-bold ">Your Activities</p>
           <p className="text-xl text-[#0088FE] font-semibold  flex  items-center">
-            <span><FaCartShopping/></span>
+            <span>
+              <FaCartShopping />
+            </span>
             <span>Orders: {stats.length}</span>
-            </p>
+          </p>
           <p className="text-xl text-[#00C4A1] font-semibold flex  items-center ">
-            <span><FaRegStar /></span>
+            <span>
+              <FaRegStar />
+            </span>
             <span>Reviews: {review.length}</span>
-            </p>
+          </p>
           <p className="text-xl text-[#FFBB28] font-semibold  flex  items-center">
-            <span><FaCalendarAlt /></span>
+            <span>
+              <FaCalendarAlt />
+            </span>
             <span>Bookings: {}</span>
-            </p>
+          </p>
           <p className="text-xl text-[#FF8042] font-semibold flex  items-center">
-            <span><IoWalletSharp/></span>
+            <span>
+              <IoWalletSharp />
+            </span>
             <span>Payment: {payment.length}</span>
-            </p>
+          </p>
         </div>
       </div>
     </div>

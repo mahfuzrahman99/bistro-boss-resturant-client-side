@@ -115,7 +115,9 @@ const router = createBrowserRouter([
           </AdminRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:2000/orderMenus/${params.id}`),
+          fetch(
+            `https://bistro-boss-resturant-server-side.vercel.app/orderMenus/${params.id}`
+          ),
       },
       {
         path: "manageItems",
