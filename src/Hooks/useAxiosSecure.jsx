@@ -24,7 +24,7 @@ const useAxiosSecure = () => {
     },
     (err) => Promise.reject(err)
   );
-  
+
   axiosSecure.interceptors.response.use(
     (response) => {
       return response;
