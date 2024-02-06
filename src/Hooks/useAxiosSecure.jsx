@@ -24,20 +24,7 @@ const useAxiosSecure = () => {
     },
     (err) => Promise.reject(err)
   );
-
-  // get from cookie
-  // axiosSecure.interceptors.request.use(
-  //   (config) => {
-  //     const token = Cookies.get("token");
-  //     console.log(token);
-  //     if (token) {
-  //       config.headers.authorization = `Bearer ${token}`;
-  //     }
-  //     return config;
-  //   },
-  //   (err) => Promise.reject(err)
-  // );
-
+  
   axiosSecure.interceptors.response.use(
     (response) => {
       return response;
