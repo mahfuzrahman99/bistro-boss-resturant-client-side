@@ -44,7 +44,7 @@ const Login = () => {
           const user = { email };
           axios
             .post(
-              "https://bistro-boss-resturant-server-side.vercel.app/jwt",
+              "https://bistro-boss-resturant-server-side-wcku.vercel.app/jwt",
               user,
               { withCredentials: true }
             )
